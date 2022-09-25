@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="C:\Users\yuxiaojia\Desktop\python\1.ico" type="image/x-icon"/><!--如果你忽略了上面的步骤，请忽略这一步骤-->
+		
+		<style type="text/css">/*css样式，页面布局*/
+			table{border-collapse:collapse;}
+			#txt{
+				resize:none;
+				width:600px;
+				height:40px;
+				font-size:20px;
+				font-color:red;
+				}
+			a{
+				border:1px solid;
+				text-decoration:none;
+				font-family:微软雅黑；
+				font-size:10px;
+				font-color:red;
+				}
+			img{width:600px;
+				height:300px;
+				
+				}
+			.img_1{text-align:center;}
+			#btn{
+				width:100px;
+				height:40px;
+				
+				font-size:20px;
+				}	
+		</style>
+		<script>
+			window.onload=function(){//引用方法，进入页面自动弹出
+				alert("请输入您的生日！\nx月x日");
+				var oBtn=document.getElementById("btn");//获取按钮
+				var oTxt=document.getElementById("txt");//获取文本框
+				oTxt.focus();//获得光标焦点
+				oBtn.onclick=function(){//按钮功能
+					if (oTxt.value == "") {//文本框为空，提示输入！
+						alert("请输入你的生日！")
+						}
+						if (oTxt.value == "9月25日"){//判断输入日期是否一致，一致打开另一个窗口，自动播放视频
+							alert("李梓涵生日快乐！")//点击确定，开始播放视频
+							window.open(url="1.mp4",target="_blank")
+							}
+							if(oTxt.value != ""&&oTxt.value != "9月25日"){
+								alert("请重新输入！")
+						}
+					}
+				}	
+		</script>
+	</head>
+	<body>
+		<div class="img_1">
+		<img  src="C:\Users\yuxiaojia\Desktop\python\1.gif"/><!--主页百度logo图片，找张像样点的照片插入-->
+		</div>
+		<form>
+			<div class="img_1">
+	    <input id="txt" type="text"/>
+		<input id="btn" type="button" value="输入"/>
+		
+		    </div>
+		 </form>
+	</body>
+</html>
